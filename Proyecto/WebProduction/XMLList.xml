@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<users>
+  <user>
+    <nickname>49FEA5A176505F9234B36E033D24ECDDB2F9E437</nickname><!---Equiz-->
+    <pass>7110EDA4D09E062AA5E4A390B0A572AC0D2C0220</pass><!---1234-->
+    <role>DC56D2B35A5FABAE81D515ACF246DB8470FDE96C</role><!---Administracion-->
+  </user>
+
+  <user>
+    <nickname>753507F297CDB333F6331AE77CCED665A3847660</nickname><!---Ye-->
+    <pass>40BD001563085FC35165329EA1FF5C5ECBDBBEEF</pass><!---123-->
+    <role>9F101B354DAB3608212B291B73A78BED99C9E6F0</role><!---Ingenieria-->
+  </user>
+</users>
