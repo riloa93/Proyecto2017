@@ -4,19 +4,36 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Lista de contabilidad</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+
     <asp:ContentPlaceHolder id="head" runat="server">
-        <link href="../css/bootstrap.min.css" rel="stylesheet" />
-        <link href="../css/font-awesome.min.css" rel="stylesheet" />
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <aside class="side-bar">
+            <ul>
+                <li><asp:LinkButton ID="lnkHome" runat="server" OnClick="lnkHome_Click"><i class="fa fa-home"></i>&nbsp;&nbsp;Principal</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lnkorder" runat="server" OnClick="lnkorder_Click"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Nueva Orden</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lnkAsign" runat="server" OnClick="lnkAsign_Click"><i class="fa fa-address-card"></i>&nbsp;&nbsp;Asignar Proyecto</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lnkClose" runat="server" OnClick="lnkClose_Click"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Cerrar Sesión</asp:LinkButton></li>
+            </ul>
+        </aside>
+		
+        <section class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </section>
+
+		<footer class="Footer bg-dark dker">
+			<p>
+				2017 © Global Integral Services S.A. de C.V.
+			</p>	
+		</footer>
     </form>
     <script src="../js/jquery-1.10.2.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

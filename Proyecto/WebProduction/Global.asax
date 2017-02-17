@@ -1,7 +1,6 @@
 ﻿<%@ Application Language="C#" %>
 
 <script runat="server">
-
     protected void Application_AuthenticateRequest(Object sender, EventArgs e)
     {
         /*if (HttpContext.Current.User != null)

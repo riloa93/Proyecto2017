@@ -1,0 +1,121 @@
+*{
+
+}
+
+body{
+	min-height: 100%;
+    background: url('../img/Logo EG.png');
+    background-size: 99%;
+    background-position: all;
+    background-repeat: no-repeat;
+    outline: none;
+    overflow-y: hidden;
+}
+
+nav{
+	background-color: #3b67e1;
+    position: fixed;
+    max-height: 6%;
+    max-width: 100%;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li{
+	float: left;
+}
+
+nav ul li:hover{
+	background-color: #3953d0;
+}
+
+nav ul li a{
+text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: white!important;
+    text-shadow: 2px 1px rgba(18, 47, 191, 0.48);
+    font-size: 16px;
+}
+
+nav ul li a:hover{
+	color: white!important;
+	text-decoration: none;
+	border-radius: 7px;
+    border: 1px solid rgba(18, 47, 191, 0.48);
+}
+header{
+	width: 100%;
+	background-color: #3b67e1;
+}
+
+aside{
+	padding: 0px 30px;
+    list-style: none!important;
+    outline: none;
+}
+
+aside ul{
+    list-style: none;
+    padding: 30px 16px;
+}
+
+aside ul li{
+    padding: 15px 0px;
+    margin-left:-40px;
+}
+
+aside ul li:hover{
+    width: 154.2%;
+    background-color: rgba(53, 53, 53, 0.36);
+}
+
+aside ul li a{
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	outline: none!important;
+}
+
+aside ul li a:hover{
+	text-decoration: none;
+	outline: none!important;
+}
+
+.wrapper{
+	min-height: 100%;
+	clear: both;
+}
+.Footer{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+.Footer p,#footer p{
+	padding: 1.2rem 0;
+	/*margin: 0;*/
+	bottom: 0px;
+	text-align: center;
+	position: relative;
+	clear: both;
+}
+
+.row{
+	position: absolute;
+	top: 25px!important;
+}
+
+.bg-dark{
+	background-color: #444;
+	color: #f4f4f4;!important;
+}
+
+.side-bar{
+	float: left;
+	min-height: 100%;
+	background-color:black; 
+	min-width: 250px;
+	min-height: 1024px;
+}
