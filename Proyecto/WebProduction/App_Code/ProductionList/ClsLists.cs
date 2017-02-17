@@ -18,6 +18,12 @@ public class ClsLists
         {
             worksheet.Cell("A3").Value = "Consecutivo del ultimo valor añadido.";
         }
+<<<<<<< HEAD
         workbook.SaveAs("PATH DE conexion al archivo");
+=======
+        workbook.SaveAs("c:\\Users\\Programacion\\Downloads\\Lista de produccion.xlsx");
+
+        string path = @"\\GlobalServer\Nogales(SERVER)\Administracion\Contabilidad";//path para conexion al arhivo y crearlo
+>>>>>>> 184cd4f109e90832e58195ec8310254564cc07a1
     }
 }
