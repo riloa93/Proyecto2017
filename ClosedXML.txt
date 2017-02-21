@@ -1,0 +1,50 @@
+        var workbook = new XLWorkbook();      //ESTE CODIGO YA FUNCIONA COMPLETAMENTE E INCLUSO MODIFICA EL ARCHIVO YA EXISTENTE
+        var worksheet = workbook.Worksheets.Add("Lista de produccion");
+        //var path = @"\\GlobalServer\Nogales(SERVER)\Administracion\Contabilidad\Lista Produccion.xlsx";
+        var local = "C:\\Users\\Programacion\\Downloads\\Lista Produccion.xlsx";
+        var listOfStrings = new List<string>();
+
+        if (File.Exists(local))
+        {
+            if (worksheet.Cell("A2").Value.ToString() != "")
+            {
+                worksheet.Cell("A3").InsertData("Consecutivo del ultimo valor añadido. No es nulo");
+
+                listOfStrings.Add("House");
+                listOfStrings.Add("Car");
+                listOfStrings.Add("Trailer");
+                worksheet.Cell("B2").AsRange().AddToNamed("Titles");
+                var rangeWithStrings = worksheet.Cell("B2").InsertData(listOfStrings);
+            }
+            else
+            {
+                worksheet.Cell("A2").InsertData("Consecutivo del ultimo valor añadido. Si es nulo");
+ 
+                listOfStrings.Add("House");
+                listOfStrings.Add("Car");
+                listOfStrings.Add("Trailer");
+                worksheet.Cell("A2").AsRange().AddToNamed("Titles");
+                var rangeWithStrings = worksheet.Cell("A2").InsertData(listOfStrings);
+            }
+            workbook.SaveAs(local);
+            //workbook.SaveAs(path);
+        }
+        else
+        {
+            int col = 1; int letra = 65; //Letra es para convertir el char a letra de la A = 65 a la Z = 90
+            DataTable T = ClsGenericDataAccess.SetCellsValues();
+
+            if (T.Rows.Count > 0)
+            {
+                foreach (DataRow dr in T.Rows)
+                {
+                    foreach (DataColumn dc in T.Columns)
+                    {
+                        worksheet.Cell(Convert.ToChar(letra).ToString() + (col).ToString()).Value = dr[dc].ToString(); letra++;
+                    }
+                }
+            }
+
+            workbook.SaveAs(local);
+            //workbook.SaveAs(path);
+        }
